@@ -81,6 +81,7 @@
   <ItemGroup>
     <VSCTCompile Include="DupSelection.vsct">
       <ResourceName>Menus.ctmenu</ResourceName>
+      <SubType>Designer</SubType>
     </VSCTCompile>
   </ItemGroup>
   <ItemGroup>
@@ -90,13 +91,17 @@
     <Content Include="dupsel-screenshot.png">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="license.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Resource Include="Resources\Package.ico" />
   </ItemGroup>
   <ItemGroup>
-      <EmbeddedResource Include="VSPackage.resx">
-          <MergeWithCTO>true</MergeWithCTO>
-          <ManifestResourceName>VSPackage</ManifestResourceName>
-      </EmbeddedResource>
+    <EmbeddedResource Include="VSPackage.resx">
+      <MergeWithCTO>true</MergeWithCTO>
+      <ManifestResourceName>VSPackage</ManifestResourceName>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <UseCodebase>true</UseCodebase>
