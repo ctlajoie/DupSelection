@@ -42,6 +42,33 @@ namespace ChrisLajoie.DupSelection
             {
                 // duplicate selection
 
+                // If we have a multi-line stream slection, it is likely that the user wants to
+                // duplicate all lines in the selection. Extend the selection to accomplish this
+                // if necessary.
+                if (_view.Selection.Mode == TextSelectionMode.Stream)
+                {
+                    var startLine = snapshot.GetLineFromPosition(_view.Selection.Start.Position.Position);
+                    var endLine = snapshot.GetLineFromPosition(_view.Selection.End.Position.Position);
+                    if (startLine.LineNumber != endLine.LineNumber)
+                    {
+                        // selection spans multiple lines
+                        var newSelStart = _view.Selection.Start.Position;
+                        var newSelEnd = _view.Selection.End.Position;
+
+                        if (startLine.Start < newSelStart)
+                            newSelStart = startLine.Start;
+
+                        if (endLine.Start != newSelEnd)
+                            newSelEnd = endLine.EndIncludingLineBreak;
+
+                        if (_view.Selection.Start.Position != newSelStart || _view.Selection.End.Position != newSelEnd)
+                        {
+                            _view.Selection.Select(new SnapshotSpan(newSelStart, newSelEnd), false);
+                            _view.Caret.MoveTo(newSelEnd, PositionAffinity.Predecessor);
+                        }
+                    }
+                }
+
                 // When text is inserted into a pre-existing selection, VS extends the selection
                 // to also contain the inserted text. This is not desired in this case, so save
                 // the current selection so we can revert to it later.
