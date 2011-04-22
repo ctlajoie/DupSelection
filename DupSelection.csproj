@@ -88,8 +88,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
-    <Resource Include="Resources\Images_32bit.bmp" />
-    <Resource Include="Resources\cmdicon.bmp" />
+    <Resource Include="Resources\cmdicon.png" />
     <Resource Include="Resources\Package.ico" />
   </ItemGroup>
   <ItemGroup>
