@@ -49,18 +49,16 @@ namespace ChrisLajoie.DupSelection
                 {
                     var startLine = snapshot.GetLineFromPosition(_view.Selection.Start.Position.Position);
                     var endLine = snapshot.GetLineFromPosition(_view.Selection.End.Position.Position);
-                    if (startLine.LineNumber != endLine.LineNumber)
+                    if (startLine.LineNumber != endLine.LineNumber &&
+                        (!_view.Selection.IsReversed || _view.Selection.End.Position != endLine.End))
                     {
                         // selection spans multiple lines
                         var newSelStart = _view.Selection.Start.Position;
                         var newSelEnd = _view.Selection.End.Position;
-
                         if (startLine.Start < newSelStart)
                             newSelStart = startLine.Start;
-
                         if (endLine.Start != newSelEnd)
                             newSelEnd = endLine.EndIncludingLineBreak;
-
                         if (_view.Selection.Start.Position != newSelStart || _view.Selection.End.Position != newSelEnd)
                         {
                             _view.Selection.Select(new SnapshotSpan(newSelStart, newSelEnd), false);
