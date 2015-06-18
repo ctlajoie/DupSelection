@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <Extern href="stdidcmd.h"/>
-    <Extern href="vsshlids.h"/>
-    <Extern href="msobtnid.h"/>
+    <Extern href="stdidcmd.h" />
+    <Extern href="vsshlids.h" />
+    <!--<Extern href="msobtnid.h" xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" />-->
 
     <Commands package="guidDupSelectionPkg">
         <Groups>
             <Group guid="guidDupSelectionCmdSet" id="MyMenuGroup" priority="0x0600">
-                <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_EDIT"/>
+                <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_EDIT" />
             </Group>
         </Groups>
         <Buttons>
@@ -28,7 +28,7 @@
         </Bitmaps>
     </Commands>
     <KeyBindings>
-        <KeyBinding guid="guidDupSelectionCmdSet" id="cmdidDupSelection" key1="D" mod1="Alt" editor="guidVSStd97"/>
+        <KeyBinding guid="guidDupSelectionCmdSet" id="cmdidDupSelection" key1="D" mod1="Alt" editor="guidVSStd97" />
     </KeyBindings>
     <Symbols>
         <GuidSymbol name="guidDupSelectionPkg" value="{e5f7e157-f686-46b7-a588-85b08cdaa5f0}" />
