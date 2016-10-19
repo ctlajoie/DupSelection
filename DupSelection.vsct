@@ -1,43 +1,43 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CommandTable xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <Extern href="stdidcmd.h" />
-    <Extern href="vsshlids.h" />
-    <!--<Extern href="msobtnid.h" xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" />-->
+  <Extern href="stdidcmd.h" />
+  <Extern href="vsshlids.h" />
+  <!--<Extern href="msobtnid.h" xmlns="http://schemas.microsoft.com/VisualStudio/2005-10-18/CommandTable" />-->
 
-    <Commands package="guidDupSelectionPkg">
-        <Groups>
-            <Group guid="guidDupSelectionCmdSet" id="MyMenuGroup" priority="0x0600">
-                <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_EDIT" />
-            </Group>
-        </Groups>
-        <Buttons>
-            <Button guid="guidDupSelectionCmdSet" id="cmdidDupSelection" priority="0x0100" type="Button">
-                <Parent guid="guidDupSelectionCmdSet" id="MyMenuGroup" />
-                <Icon guid="guidCmdIcon" id="bmpCmdIcon" />
-                <CommandFlag>DynamicVisibility</CommandFlag>
-                <CommandFlag>DontCache</CommandFlag>
-                <CommandFlag>DefaultInvisible</CommandFlag>
-                <Strings>
-                    <CommandName>cmdidDupSelection</CommandName>
-                    <ButtonText>Duplicate Selection</ButtonText>
-                </Strings>
-            </Button>
-        </Buttons>
-        <Bitmaps>
-            <Bitmap guid="guidCmdIcon" href="Resources\cmdicon.png" usedList="bmpCmdIcon" />
-        </Bitmaps>
-    </Commands>
-    <KeyBindings>
-        <KeyBinding guid="guidDupSelectionCmdSet" id="cmdidDupSelection" key1="D" mod1="Alt" editor="guidVSStd97" />
-    </KeyBindings>
-    <Symbols>
-        <GuidSymbol name="guidDupSelectionPkg" value="{e5f7e157-f686-46b7-a588-85b08cdaa5f0}" />
-        <GuidSymbol name="guidDupSelectionCmdSet" value="{85dcd5f2-19a5-4ee2-a99b-4fac4dc5c4ca}">
-            <IDSymbol name="MyMenuGroup" value="0x1020" />
-            <IDSymbol name="cmdidDupSelection" value="0x0100" />
-        </GuidSymbol>
-        <GuidSymbol name="guidCmdIcon" value="{e4cc0e42-a09d-4602-a965-d2b3f7e1f496}">
-            <IDSymbol name="bmpCmdIcon" value="1" />
-        </GuidSymbol>
-    </Symbols>
+  <Commands package="guidDupSelectionPkg">
+    <Groups>
+      <Group guid="guidDupSelectionCmdSet" id="MyMenuGroup" priority="0x0600">
+        <Parent guid="guidSHLMainMenu" id="IDM_VS_MENU_EDIT" />
+      </Group>
+    </Groups>
+    <Buttons>
+      <Button guid="guidDupSelectionCmdSet" id="cmdidDupSelection" priority="0x0100" type="Button">
+        <Parent guid="guidDupSelectionCmdSet" id="MyMenuGroup" />
+        <Icon guid="guidCmdIcon" id="bmpCmdIcon" />
+        <CommandFlag>DynamicVisibility</CommandFlag>
+        <CommandFlag>DontCache</CommandFlag>
+        <CommandFlag>DefaultInvisible</CommandFlag>
+        <Strings>
+          <CommandName>cmdidDupSelection</CommandName>
+          <ButtonText>Duplicate Selection</ButtonText>
+        </Strings>
+      </Button>
+    </Buttons>
+    <Bitmaps>
+      <Bitmap guid="guidCmdIcon" href="Resources\cmdicon.png" usedList="bmpCmdIcon" />
+    </Bitmaps>
+  </Commands>
+  <KeyBindings>
+    <KeyBinding guid="guidDupSelectionCmdSet" id="cmdidDupSelection" key1="D" mod1="Alt" editor="guidVSStd97" />
+  </KeyBindings>
+  <Symbols>
+    <GuidSymbol name="guidDupSelectionPkg" value="{e5f7e157-f686-46b7-a588-85b08cdaa5f0}" />
+    <GuidSymbol name="guidDupSelectionCmdSet" value="{85dcd5f2-19a5-4ee2-a99b-4fac4dc5c4ca}">
+      <IDSymbol name="MyMenuGroup" value="0x1020" />
+      <IDSymbol name="cmdidDupSelection" value="0x0100" />
+    </GuidSymbol>
+    <GuidSymbol name="guidCmdIcon" value="{e4cc0e42-a09d-4602-a965-d2b3f7e1f496}">
+      <IDSymbol name="bmpCmdIcon" value="1" />
+    </GuidSymbol>
+  </Symbols>
 </CommandTable>
