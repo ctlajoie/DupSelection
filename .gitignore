@@ -1,6 +1,8 @@
+.vs/
 bin/
 obj*/
 *.vsp
 *.suo
 *.user
 *.snag
+/packages
