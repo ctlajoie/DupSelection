@@ -25,7 +25,7 @@
     </Bitmaps>
   </Commands>
   <KeyBindings>
-    <KeyBinding guid="guidDupSelectionCmdSet" id="cmdidDupSelection" mod1="Control" key1="D" editor="guidVSStd97" />
+    <KeyBinding guid="guidDupSelectionCmdSet" id="cmdidDupSelection" mod1="Control" key1="D" editor="GUID_TextEditorFactory" />
   </KeyBindings>
   <Symbols>
     <GuidSymbol name="guidDupSelectionPkg" value="{e5f7e157-f686-46b7-a588-85b08cdaa5f0}" />
