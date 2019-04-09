@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
     <Metadata>
-        <Identity Id="e5f7e157-f686-46b7-a588-85b08cdaa5f0" Version="2.1" Language="en-US" Publisher="Chris Lajoie" />
+        <Identity Id="e5f7e157-f686-46b7-a588-85b08cdaa5f0" Version="2.2" Language="en-US" Publisher="Chris Lajoie" />
         <DisplayName>Duplicate Selection</DisplayName>
         <Description xml:space="preserve">Adds a command to duplicate the current selection (or line). Please see the More Info link for keybinding information.</Description>
         <MoreInfo>https://github.com/ctlajoie/DupSelection</MoreInfo>
