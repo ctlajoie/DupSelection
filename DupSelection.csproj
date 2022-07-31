@@ -178,6 +178,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Resource Include="ReleaseInstructions.txt" />
     <None Include="packages.config" />
     <None Include="README.md" />
     <None Include="source.extension.vsixmanifest" />

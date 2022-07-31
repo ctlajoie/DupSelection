@@ -1,0 +1,6 @@
+Last updated 7/31/2022
+
+- Increment version number in Constants.cs and source.extension.vsixmanifest
+- Modify <InstallationTarget> elements in vsixmanifest
+- go to https://marketplace.visualstudio.com/ and log in with appropriate account
+- go to Publish Extensions link in top right
